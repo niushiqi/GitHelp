@@ -29,6 +29,7 @@
         git checkout -- XX 把XX文件在工作区的修改全部撤销。
         git rm XX 删除XX文件
         git clone https://github.com/用户id/远程仓库名.git 从远程库中克隆到本地
+	grt
 
     5.说明
     Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。

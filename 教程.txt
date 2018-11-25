@@ -1,4 +1,4 @@
-﻿具体使用方法
+具体使用方法
 
     1.配置ssh key 在本地创建ssh key
         $ ssh-keygen -t rsa -C "your_email@youremail.com" 
@@ -21,6 +21,7 @@
         git status 查看仓库状态
         git diff XX 查看XX文件修改了那些内容
         git log 查看历史记录
+		git log —author=niushiqi 按照名字来看log
         git log -pretty=oneline 查看精简的历史记录
         git reset -hard HEAD^/git reset -hard HEAD~ 回退到上一个版本(如果想回退到100个版本，使用git reset –hard HEAD~100)
 	git reset HEAD readme.txt 暂存区的修改撤销掉

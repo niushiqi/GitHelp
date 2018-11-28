@@ -21,20 +21,29 @@
         git status 查看仓库状态
         git diff XX 查看XX文件修改了那些内容
         git log 查看历史记录
-		git log —author=niushiqi 按照名字来看log
+	git log —author=niushiqi 按照名字来看log
         git log -pretty=oneline 查看精简的历史记录
-        git reset -hard HEAD^/git reset -hard HEAD~ 回退到上一个版本(如果想回退到100个版本，使用git reset –hard HEAD~100)
+	git log -2 显示几条记录
+	git log -p — 文件名 显示某个文件所有改动
+	git log —graph 显示图表
+	git log —name-status 显示文件对应的改动 
+        git reset --hard HEAD^/git reset -hard HEAD~ 回退到上一个版本(如果想回退到100个版本，使用git reset –hard HEAD~100)
 	git reset HEAD readme.txt 暂存区的修改撤销掉
-        git reset -hard 版本号 回退到任意一次提交状态
+        git reset -hard 版本号 回退到任意一次提交状态,-hard会影响工作区
         git reflog 查看历史记录的版本号
-        git checkout -- XX 把XX文件在工作区的修改全部撤销。
+        git checkout -- XX 把XX文件在工作区的修改全部撤销(仅仅修改，未add，未commit)。
         git rm XX 删除XX文件
         git clone https://github.com/用户id/远程仓库名.git 从远程库中克隆到本地
         git pull origin master 从远程获取最新版本并merge到本地
         git fetch origin master 相当于是从远程获取最新版本到本地，不会自动merge
         git merge origin/master 进行合并
+	git cherry-pick  0128660c08e325d410cb845616af355c0c19c6fe 将某一提交merge进来
 
     5.说明
     Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。
 
     6.分支管理/标签管理
+
+    7.常见问题
+        1.出现Merge branch 'dev' of github.com:qdraul/chatmore into dev
+          解决方法：https://www.cnblogs.com/Sinte-Beuve/p/9195018.html

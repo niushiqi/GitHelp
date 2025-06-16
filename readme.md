@@ -1,14 +1,14 @@
 # 具体使用方法
 
 1. 配置ssh key 在本地创建ssh key
-    ```
+    ```java
     $ ssh-keygen -t rsa -C "your_email@youremail.com"
     //后面的your_email@youremail.com改为你的邮箱，之后会要求确认路径和输入密码，我们这使用默认的一路回车就行。成功的话会在用户下生成.ssh文件夹，进去，打开id_rsa.pub文件，复制里面的key（全部内容）。回到github，进入Account Settings，左边选择SSH Keys，Add SSH Key，title随便填，粘贴key。为了验证是否成功，在git bash下输入：
     $ ssh -T git@github.com
     //如果是第一次的会提示是否continue，输入yes就会看到：You’ve successfully authenticated, but GitHub does not provide shell access 。这就表示已成功连上github。
     ```
 1. 设置username和email，因为github每次commit都会记录他们。
-    ```
+    ```java
     $ git config --global user.name "your name"
     $ git config --global user.email "your_email@youremail.com"
     ```
@@ -16,7 +16,7 @@
 1. 建立远程仓库：要使用git，首先得有一个远程仓库吧，下面是在自己的主页中新建一个远程仓库。建立远程仓库之后会有这样一个页面，点击箭头所指按钮，拷贝仓库地址（这个地址一会要用）。
 
 1. 常用命令
-    ```
+    ```java
     git init //当前的目录变成可以管理的git仓库，生成隐藏.git文件。
     git add XX //把xx文件添加到暂存区去（XX可以使 单独的一个 . 表示添加工作区所有文件）
     git commit -m "XX" //提交文件 XX是这次提交的注释。
